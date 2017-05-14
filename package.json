@@ -1,0 +1,37 @@
+{
+  "name": "torii-chat",
+  "version": "0.0.1",
+  "description": "Simple chat using REST API and Socket.io",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miszo/torii-chat.git"
+  },
+  "keywords": [
+    "chat",
+    "socket.io",
+    "angularjs",
+    "nodejs"
+  ],
+  "author": "Miszo Radomski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miszo/torii-chat/issues"
+  },
+  "homepage": "https://github.com/miszo/torii-chat#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
+    "express": "^4.15.2",
+    "jsonwebtoken": "^7.4.0",
+    "mongoose": "^4.9.8",
+    "morgan": "^1.8.1",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.2.1"
+  }
+}
