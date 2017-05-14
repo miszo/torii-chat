@@ -1,4 +1,9 @@
+const AuthenticationController = require('../controllers/authentication');
+const UserController = require('../controllers/user');
 const express = require('express');
+const passport = require('passport');
+
+const requireAuth = passport.authenticate('jwt', {session: false});
 
 module.exports = function(app) {
   // Initialize route groups
@@ -18,14 +23,10 @@ module.exports = function(app) {
   apiRoutes.use('/auth', authRoutes);
   
   // Registration route
-  authRoutes.post('/register', (req, res, next) => {
-    res.send('REGISTER');
-  });
-  
+  authRoutes.post('/register', AuthenticationController.register);
+
   // Login route
-  authRoutes.post('/login', (req, res, next) => {
-    res.send('LOGIN');
-  });
+  authRoutes.post('/login', AuthenticationController.login);
   
   //= ========================
   // User Routes
@@ -35,9 +36,8 @@ module.exports = function(app) {
   apiRoutes.use('/user', userRoutes);
   
   // View user profile route
-  userRoutes.get('/:userId', (req, res, next) => {
-    res.send('USER');
-  });
+  userRoutes.get('/:userId', requireAuth, UserController.viewProfile);
+
   
   //= ========================
   // Chat Routes
