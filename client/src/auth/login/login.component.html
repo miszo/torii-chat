@@ -1,0 +1,19 @@
+<div>
+  <form ng-submit="$ctrl.login()">
+    <label>
+      username:
+      <input type="text"
+              ng-model="$ctrl.userCredentials.username">
+    </label>
+    <br>
+    <label>
+      password:
+      <input type="password"
+              ng-model="$ctrl.userCredentials.password">
+    </label>
+    <br>
+
+    <button type="submit">Login</button>
+  </form>
+  <span>Don't have an account? <a ui-sref="register">Register</a></span>
+</div>

@@ -1,13 +1,13 @@
 {
-  "name": "torii-webpack-2",
-  "version": "1.0.0",
+  "name": "torii-chat",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
     "develop": "webpack && webpack-dev-server"
   },
-  "author": "Arek K",
+  "author": "Miszo",
   "license": "ISC",
   "devDependencies": {
     "angular-mocks": "^1.6.4",
@@ -30,6 +30,9 @@
   },
   "dependencies": {
     "@uirouter/angularjs": "^1.0.3",
-    "angular": "^1.6.3"
+    "angular": "^1.6.4",
+    "angular-animate": "^1.6.4",
+    "angular-aria": "^1.6.4",
+    "angular-material": "^1.1.4"
   }
 }

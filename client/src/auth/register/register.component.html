@@ -1,0 +1,37 @@
+<div>
+  <form ng-submit="$ctrl.register()">
+    <label>
+      username:
+      <input type="text"
+              ng-model="$ctrl.userData.username">
+    </label>
+    <br>
+    <label>
+      e-mail:
+      <input type="email"
+              ng-model="$ctrl.userData.email">
+    </label>
+    <br>
+    <label>
+      first name:
+      <input type="text"
+              ng-model="$ctrl.userData.firstName">
+    </label>
+    <br>
+    <label>
+      last name:
+      <input type="text"
+              ng-model="$ctrl.userData.lastName">
+    </label>
+    <br>
+    <label>
+      password:
+      <input type="password"
+              ng-model="$ctrl.userData.password">
+    </label>
+    <br>
+
+    <button type="submit">Register</button>
+  </form>
+    <span>Already a user? <a ui-sref="login">Login</a></span>
+</div>

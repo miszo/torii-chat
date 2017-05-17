@@ -4,7 +4,7 @@ const webpack = require('webpack');
 module.exports = {
   context: path.resolve(__dirname, './src'),
   entry: {
-    app: './app.js',
+    app: './app.module.js',
     vendor: './vendor.js'
   },
   output: {
