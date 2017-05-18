@@ -36,7 +36,7 @@ module.exports = function(app) {
   apiRoutes.use('/user', userRoutes);
   
   // View user profile route
-  userRoutes.get('/:userId', requireAuth, UserController.viewProfile);
+  userRoutes.get('/', requireAuth, UserController.viewProfile);
 
   
   //= ========================

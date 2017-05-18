@@ -1,6 +1,15 @@
 class UserCtrl {
-  constructor() {
+  constructor(userService) {
     console.log('UserCtrl is up!');
+    this.userService = userService;
+
+    this.user = {}
+  }
+
+  $onInit() {
+    this.userService.getUserData()
+      .then(user => this.user = user);
+
   }
 }
 

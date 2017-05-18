@@ -3,13 +3,15 @@ class AuthService {
     console.log('AuthService is ready!');
     this.$http = $http;
     this.$state = $state;
+
+    this.authToken = null;
   }
 
   registerUser(userData) {
     const url = 'http://localhost:3000/api/auth/register/';
     const headers = new Headers();
     headers.append('Content-Type','application/json');
-    this.$http.post(url, userData) 
+    return this.$http.post(url, userData) 
       .then(res => {
           localStorage.setItem('id_token', res.data.token);
           this.$http.defaults.headers.common.Authorization = res.data.token;
@@ -22,7 +24,7 @@ class AuthService {
     const url = 'http://localhost:3000/api/auth/login/';
     const headers = new Headers();
     headers.append('Content-Type','application/json');
-    this.$http.post(url, userCredentials)
+    return this.$http.post(url, userCredentials)
       .then(res => {
         if (res.data && res.data.token) {
           localStorage.setItem('id_token', res.data.token);
@@ -31,6 +33,12 @@ class AuthService {
         }
       })
       .catch(err => console.warn(err))
+  }
+
+  loadToken(){
+    const token = localStorage.getItem('id_token');
+    this.authToken = token;
+    return this.authToken;
   }
 
 
