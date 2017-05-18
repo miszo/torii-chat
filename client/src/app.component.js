@@ -6,10 +6,11 @@ class AppCtrl {
 
 angular
   .module('app')
-  .component('appComponent', {
+  .component('app', {
     selector: 'app',
     template: require('./app.component.html'),
     controller: AppCtrl
+    
   })
   .component('homeComponent', {
     selector: 'home',
