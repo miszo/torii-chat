@@ -6,21 +6,14 @@ class AppCtrl {
 
 angular
   .module('app')
-  .component('app', {
+  .component('appComponent', {
     selector: 'app',
-    template: `
-      <div>
-        <nav>
-          <a ui-sref="home"> home </a>
-        </nav>
-        <ui-view></ui-view>
-      </div>
-     `
+    template: require('./app.component.html'),
+    controller: AppCtrl
   })
-  .component('home', {
+  .component('homeComponent', {
     selector: 'home',
     template: '<div>home</div>',
-    controller: AppCtrl
   });
 
 

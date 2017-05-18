@@ -3,11 +3,15 @@ angular
   [
     'ui.router',
     'ngMaterial',
+    'routesModule',
     'authModule',
+    'userModule'
   ]);
 
 
-require('./app.route');
 require('./app.component');
 
+require('./routes');
 require('./auth');
+require('./user');
+
