@@ -1,37 +1,71 @@
 <div>
-  <form ng-submit="$ctrl.register()">
-    <label>
-      username:
-      <input type="text"
-              ng-model="$ctrl.userData.username">
-    </label>
-    <br>
-    <label>
-      e-mail:
-      <input type="email"
-              ng-model="$ctrl.userData.email">
-    </label>
-    <br>
-    <label>
-      first name:
-      <input type="text"
-              ng-model="$ctrl.userData.firstName">
-    </label>
-    <br>
-    <label>
-      last name:
-      <input type="text"
-              ng-model="$ctrl.userData.lastName">
-    </label>
-    <br>
-    <label>
-      password:
-      <input type="password"
-              ng-model="$ctrl.userData.password">
-    </label>
-    <br>
+  <form name="registerForm"
+        ng-submit="$ctrl.register()">
+    
 
-    <button type="submit">Register</button>
-  </form>
+    <md-input-container class="md-block">
+      <label>Username</label>
+      <input type="text"
+             name="username"
+             ng-model="$ctrl.userData.username"
+             required 
+             md-no-asterisk>
+      <div ng-messages="registerForm.username.$error">
+        <div ng-message="required">Username is required.</div>
+      </div>
+    </md-input-container>
+
+    <md-input-container class="md-block">
+      <label>Email</label>
+      <input type="email"
+             name="email"
+             ng-model="$ctrl.userData.username"
+             ng-pattern="/^.+@.+\..+$/"
+             required 
+             md-no-asterisk>
+      <div ng-messages="registerForm.email.$error">
+        <div ng-message="required">Email is required.</div>
+        <div ng-message="pattern">Please provide email address.</div>
+      </div>
+    </md-input-container>
+
+    <md-input-container class="md-block">
+      <label>First name</label>
+      <input type="text"
+             name="firstName"
+             ng-model="$ctrl.userData.firstName"
+             required 
+             md-no-asterisk>
+      <div ng-messages="registerForm.lastName.$error">
+        <div ng-message="required">First name is required.</div>
+      </div>
+    </md-input-container>
+    
+    <md-input-container class="md-block">
+      <label>Last name</label>
+      <input type="text"
+             name="lastName"
+             ng-model="$ctrl.userData.lastName"
+             required 
+             md-no-asterisk>
+      <div ng-messages="registerForm.lastName.$error">
+        <div ng-message="required">Last name is required.</div>
+      </div>
+    </md-input-container>
+  
+    <md-input-container class="md-block">
+      <label>Password</label>
+      <input type="password"
+             name="password"
+             ng-model="$ctrl.userData.password"
+             required 
+             md-no-asterisk>
+      <div ng-messages="registerForm.password.$error">
+        <div ng-message="required">Password is required.</div>
+      </div>
+    </md-input-container>
+
+    <md-button class="md-primary md-raised" type="submit">Register</md-button>
     <span>Already a user? <a ui-sref="login">Login</a></span>
+  </form>
 </div>

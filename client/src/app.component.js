@@ -1,3 +1,5 @@
+import './app.component.scss';
+
 class AppCtrl {
   constructor() {
     console.log('App component created!');
@@ -16,5 +18,4 @@ angular
     selector: 'home',
     template: '<div>home</div>',
   });
-
 

@@ -1,6 +1,49 @@
-<div>
-  <nav>
-    <a ui-sref="home">Home</a>
-  </nav>
-  <ui-view></ui-view>
+
+
+  <md-toolbar class="md-theme-indigo">
+    <div class="md-toolbar-tools">
+
+      
+      <h2 flex md-truncate> 
+        <i class="mdi mdi-angularjs"></i>
+        ngChat - Torii Academy project
+      </h2>
+
+      <md-button class="md-icon-button" 
+                 aria-label="User account"
+                 ui-sref="user">
+        <i class="mdi mdi-account"></i>
+      </md-button>
+
+    </div>
+  </md-toolbar>
+
+<div layout="row" flex>
+  <md-sidenav md-is-locked-open="true"
+              class="md-whiteframe-4dp">
+    <md-list>
+      <md-list-item>
+        <md-button ui-sref="home">
+          <i class="mdi mdi-home"></i> Home
+        </md-button>
+      </md-list-item>
+      <md-list-item>
+        <md-button ui-sref="login">
+          <i class="mdi mdi-login"></i> Login
+        </md-button>
+      </md-list-item>
+      <md-list-item>
+        <md-button ui-sref="register">
+          <i class="mdi mdi-account-plus"></i> Register
+        </md-button>
+      </md-list-item>
+    </md-list>
+  </md-sidenav>
+
+  <md-content flex layout-padding>
+    <ui-view></ui-view>
+  </md-content>
+
+
+  
 </div>

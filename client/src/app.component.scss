@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=latin-ext');
+@import '../node_modules/angular-material/angular-material.scss';
+@import url('//cdn.materialdesignicons.com/1.9.32/css/materialdesignicons.min.css');
+
+$font-stack: Roboto, 'Helvetica Neue', sans-serif !default;
+
+* { font-family: $font-stack;}

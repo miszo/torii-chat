@@ -11,28 +11,30 @@
   "license": "ISC",
   "devDependencies": {
     "angular-mocks": "^1.6.4",
-    "babel-core": "^6.24.0",
-    "babel-loader": "^6.4.1",
-    "babel-preset-es2015": "^6.24.0",
-    "css-loader": "^0.27.3",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^0.28.1",
     "html-loader": "^0.4.5",
-    "jasmine-core": "^2.6.1",
+    "jasmine-core": "^2.6.2",
     "karma": "^1.7.0",
     "karma-chrome-launcher": "^2.1.1",
     "karma-eslint": "^2.2.0",
     "karma-jasmine": "^1.1.0",
     "karma-webpack": "^2.0.3",
-    "node-sass": "^4.5.1",
-    "sass-loader": "^6.0.3",
-    "style-loader": "^0.16.0",
-    "webpack": "^2.3.2",
-    "webpack-dev-server": "^2.4.2"
+    "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.5",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
     "@uirouter/angularjs": "^1.0.3",
     "angular": "^1.6.4",
     "angular-animate": "^1.6.4",
     "angular-aria": "^1.6.4",
-    "angular-material": "^1.1.4"
+    "angular-material": "^1.1.4",
+    "angular-messages": "^1.6.4"
   }
 }

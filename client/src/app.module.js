@@ -3,6 +3,7 @@ angular
   [
     'ui.router',
     'ngMaterial',
+    'ngMessages',
     'routesModule',
     'authModule',
     'userModule'

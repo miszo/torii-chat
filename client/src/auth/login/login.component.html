@@ -1,19 +1,33 @@
 <div>
-  <form ng-submit="$ctrl.login()">
-    <label>
-      username:
-      <input type="text"
-              ng-model="$ctrl.userCredentials.username">
-    </label>
-    <br>
-    <label>
-      password:
-      <input type="password"
-              ng-model="$ctrl.userCredentials.password">
-    </label>
-    <br>
+  <form name="loginForm"
+        ng-submit="$ctrl.login()">
 
-    <button type="submit">Login</button>
+    <md-input-container class="md-block">
+      <label>Username</label>
+      <input type="text"
+             name="username"
+             ng-model="$ctrl.userCredentials.username"
+             required 
+             md-no-asterisk>
+      <div ng-messages="loginForm.username.$error">
+        <div ng-message="required">Username is required.</div>
+      </div>
+    </md-input-container>
+    
+    <md-input-container class="md-block">
+    <label>Password</label>
+      <input type="password"
+             name="password"
+             ng-model="$ctrl.userCredentials.password"
+             required
+             md-no-asterisk>
+      <div ng-messages="loginForm.password.$error">
+        <div ng-message="required">You need to provide your password.</div>
+      </div>
+    </md-input-container>
+
+
+    <md-button class="md-primary md-raised" type="submit">Login</md-button> 
+    <span>Don't have an account? <a ui-sref="register">Register</a></span>
   </form>
-  <span>Don't have an account? <a ui-sref="register">Register</a></span>
 </div>
