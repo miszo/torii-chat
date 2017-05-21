@@ -19,6 +19,6 @@ angular
   })
   .component('homeComponent', {
     selector: 'home',
-    template: '<div>home</div>',
+    template: '<div layout-padding>Home page</div>',
   });
 

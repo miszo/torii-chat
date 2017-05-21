@@ -1,15 +1,18 @@
-<div>
-  {{ $ctrl.user.id }}
-</div>
-<div>
-  {{ $ctrl.user.username }}
-</div>
-<div>
-  {{ $ctrl.user.email }}
-</div>
-<div>
-  {{ $ctrl.user.firstName }}
-</div>
-<div>
-  {{ $ctrl.user.lastName }}
+<div layout-padding>
+  <div>
+    <span>UserID:</span>
+    {{ $ctrl.user._id }}
+  </div>
+  <div>
+    <span>Username:</span>
+    {{ $ctrl.user.username }}
+  </div>
+  <div>
+    <span>E-mail:</span>
+    {{ $ctrl.user.email }}
+  </div>
+  <div>
+    <span>Name:</span>
+    {{ $ctrl.user.firstName }} {{ $ctrl.user.lastName }}
+  </div>
 </div>
