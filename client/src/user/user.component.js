@@ -9,14 +9,13 @@ class UserCtrl {
   $onInit() {
     this.userService.getUserData()
       .then(user => this.user = user);
-
   }
 }
 
 angular
   .module('userModule')
   .component('userComponent', {
-    selector: 'user',
+    selector: 'userComponent',
     template: require('./user.component.html'),
     controller: UserCtrl
   });

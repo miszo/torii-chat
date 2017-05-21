@@ -23,7 +23,6 @@
     "karma-jasmine": "^1.1.0",
     "karma-webpack": "^2.0.3",
     "node-sass": "^4.5.3",
-    "postcss-loader": "^2.0.5",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.17.0",
     "webpack": "^2.5.1",

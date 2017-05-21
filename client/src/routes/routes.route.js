@@ -17,6 +17,10 @@ function routesConfig($stateProvider, $urlRouterProvider) {
     .state('user', {
       url: '/user',
       component: 'userComponent'
+    })
+    .state('chat', {
+      url: '/chat',
+      component: 'chatComponent'
     });
 
     $urlRouterProvider.otherwise('/home');

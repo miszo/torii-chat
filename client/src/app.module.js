@@ -6,7 +6,8 @@ angular
     'ngMessages',
     'routesModule',
     'authModule',
-    'userModule'
+    'userModule',
+    'chatModule'
   ])
   .run(function($http, $state) {
     if (localStorage.getItem('id_token')) {
@@ -21,4 +22,5 @@ require('./app.component');
 
 require('./auth');
 require('./user');
+require('./chat');
 
