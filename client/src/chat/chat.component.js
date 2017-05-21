@@ -31,8 +31,8 @@ class ChatCtrl {
 angular
   .module('chatModule')
   .component('chatComponent', {
-    selector: 'chatComponent',
-    // bindings: { messageList: '<' },
+    selector: 'chat-component',
+    bindings: { messageList: '<' },
     template: require('./chat.component.html'),
     controller: ChatCtrl
   });

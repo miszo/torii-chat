@@ -18,7 +18,7 @@ class LoginCtrl {
 angular
   .module('authModule')
   .component('loginComponent', {
-    selector: 'loginComponent',
+    selector: 'login-component',
     template: require('./login.component.html'),
     controller: LoginCtrl
   });

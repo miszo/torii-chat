@@ -21,7 +21,7 @@ class RegisterCtrl {
 angular
   .module('authModule')
   .component('registerComponent', {
-    selector: 'registerComponent',
+    selector: 'register-component',
     template: require('./register.component.html'),
     controller: RegisterCtrl
   });

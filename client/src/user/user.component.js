@@ -15,7 +15,7 @@ class UserCtrl {
 angular
   .module('userModule')
   .component('userComponent', {
-    selector: 'userComponent',
+    selector: 'user-component',
     template: require('./user.component.html'),
     controller: UserCtrl
   });
