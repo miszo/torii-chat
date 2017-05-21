@@ -1,6 +1,15 @@
   <section class="chat__group-messages">
     <div ng-repeat="message in $ctrl.messageList">
-      sdfsdaf
+      <div ng-if="$ctrl.username === message.sender">
+        <div class="chat__group-message chat__group-message--user">
+          {{ message.sender }}: {{ message.message }}
+        </div>
+      </div>
+      <div ng-if="$ctrl.username !== message.sender">
+        <div class="chat__group-message">
+          {{ message.sender }}: {{ message.message }}
+        </div>
+      </div>
     </div>
   </section>
 

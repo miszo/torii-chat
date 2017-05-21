@@ -20,8 +20,7 @@ function routesConfig($stateProvider, $urlRouterProvider) {
     })
     .state('chat', {
       url: '/chat',
-      component: 'chatComponent',
-      // resolve: { messageList: (ChatService) => ChatService.getChatMessages() }
+      component: 'chatComponent'
     });
 
     $urlRouterProvider.otherwise('/home');

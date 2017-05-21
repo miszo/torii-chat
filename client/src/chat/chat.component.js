@@ -1,4 +1,7 @@
 import './chat.component.scss';
+const io = require('socket.io-client');
+const socketHost = process.env.IO_HOST || 'http://localhost:4000';
+const socket = io(socketHost);
 
 class ChatCtrl {
   constructor(chatService, userService) {
@@ -9,13 +12,17 @@ class ChatCtrl {
 
     this.username = null;
     this.message = null;
+    this.messageList = [];
   }
 
   $onInit() {
     this.userService.getUserData()
       .then(user => this.username = user.username);
 
-    this.chatService.getChatMessages();
+    socket.on('groupChatMsg', data => {
+      this.messageList.push(data);
+      return this.messageList;
+    });
   }
 
     sendGroupMsg() {
@@ -32,7 +39,6 @@ angular
   .module('chatModule')
   .component('chatComponent', {
     selector: 'chat-component',
-    bindings: { messageList: '<' },
     template: require('./chat.component.html'),
     controller: ChatCtrl
   });

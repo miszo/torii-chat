@@ -5,13 +5,8 @@ const socket = io(socketHost);
 class ChatService {
   constructor(userService) {
     console.log('ChatService is up!');
-    this.userService = userService
-    this.messageList = [{sender: 'miszo', message: 'Testowa wiadomosć'}, {sender: 'test', message: 'Testowa wiadomosć od kogoś innego'}];
+    this.userService = userService;
 
-    socket.on('groupChatMsg', data => {
-      this.messageList.push(data);
-      console.log(this.messageList);
-    });
   }
 
 
@@ -21,10 +16,6 @@ class ChatService {
         sender,
         message
       });
-  }
-
-  getChatMessages() {
-    return this.messageList;
   }
 
 }
