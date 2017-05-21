@@ -4,13 +4,9 @@ const socket = io(socketHost);
 
 class ChatService {
   constructor(userService) {
-    console.log('ChatService is up!');
     this.userService = userService;
-
   }
 
-
-  
   sendGroupMsg(sender, message) {
     socket.emit('groupChatMsg', {
         sender,

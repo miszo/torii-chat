@@ -2,8 +2,6 @@ import './app.component.scss';
 
 class AppCtrl {
   constructor(authService) {
-    console.log('App component created!');
-
     this.authService = authService;
   }
 

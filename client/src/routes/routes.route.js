@@ -1,6 +1,5 @@
 routesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 function routesConfig($stateProvider, $urlRouterProvider) {
-  console.log('Routing is ready');
   $stateProvider
     .state('login', {
       url: '/login',

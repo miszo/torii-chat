@@ -5,8 +5,6 @@ const socket = io(socketHost);
 
 class ChatCtrl {
   constructor(chatService, userService) {
-    console.log('ChatCtrl is up!');
-
     this.chatService = chatService;
     this.userService = userService;
 

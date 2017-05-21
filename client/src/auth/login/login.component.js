@@ -1,6 +1,5 @@
 class LoginCtrl {
   constructor(authService) {
-    console.log('LoginCtrl is up!');
     this.authService = authService;
     this.userCredentials = {};
   }

@@ -1,6 +1,5 @@
 class AuthService {
   constructor($http, $state) {
-    console.log('AuthService is ready!');
     this.$http = $http;
     this.$state = $state;
     this.headers = {
