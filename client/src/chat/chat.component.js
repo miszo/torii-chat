@@ -30,9 +30,9 @@ class ChatCtrl {
 
 angular
   .module('chatModule')
-  .component('chatMessagesComponent', {
-    selector: 'chat-messages',
-    bindings: { messageList: '<'} ,
+  .component('chatComponent', {
+    selector: 'chat',
+    // bindings: { messageList: '<' },
     template: require('./chat.component.html'),
     controller: ChatCtrl
   });
