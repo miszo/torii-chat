@@ -42,11 +42,16 @@
           <i class="mdi mdi-account-plus"></i> Register
         </md-button>
       </md-list-item>
+      <md-list-item>
+        <md-button ng-click="$ctrl.logout()">
+          <i class="mdi mdi-logout"></i> Logout
+        </md-button>
+      </md-list-item>
     </md-list>
   </md-sidenav>
 
-  <md-content flex layout-padding>
-    <ui-view></ui-view>
+  <md-content layout="column" flex>
+    <ui-view layout="column" flex></ui-view>
   </md-content>
 
 

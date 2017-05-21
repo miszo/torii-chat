@@ -1,8 +1,14 @@
 import './app.component.scss';
 
 class AppCtrl {
-  constructor() {
+  constructor(authService) {
     console.log('App component created!');
+
+    this.authService = authService;
+  }
+
+  logout() {
+    this.authService.logout();
   }
 }
 
@@ -12,7 +18,6 @@ angular
     selector: 'app',
     template: require('./app.component.html'),
     controller: AppCtrl
-    
   })
   .component('homeComponent', {
     selector: 'home',

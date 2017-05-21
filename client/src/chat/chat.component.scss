@@ -1,0 +1,33 @@
+.chat__group-messages, .chat__input-area {
+  display: flex;
+  box-sizing: border-box;
+  min-width: 100%;
+}
+
+.chat__group-messages {
+  height: 70%;
+  max-height: 90%;
+  flex: 1 1 90%;
+}
+
+.chat__input-area {
+  position: absolute;
+  background: #fff;
+  bottom: 0;
+  height: 10%;
+  max-height: 30%;
+  flex: 1 1 30%;
+
+  & input {
+    width: 90%;
+    padding: 10px;
+    border: none;
+  }
+
+  & .md-button {
+    margin: auto auto;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+}

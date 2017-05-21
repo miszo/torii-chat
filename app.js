@@ -48,6 +48,7 @@ app.get('/', (req, res) => {
 
 // Routes
 router(app);
+require('./socketio');
 
 // Start Server
 const server = app.listen(config.port, () => {

@@ -1,1 +1,22 @@
-<h1>Chat Component!!!</h1>
+  <section class="chat__group-messages">
+    <div ng-repeat="message in $ctrl.messageList">
+      sdfsdaf
+    </div>
+  </section>
+
+  <section class="chat__input-area md-whiteframe-8dp">
+    <form name="chatInput" 
+          ng-submit="$ctrl.sendGroupMsg()"
+          layout="row"
+          flex>
+      <input type="text"
+             placeholder="message"
+             ng-model="$ctrl.message.body">
+      <md-button class="md-icon-button" 
+                 aria-label="Send group message"
+                 type="submit">
+        <i class="mdi mdi-send"></i>
+      </md-button>
+    </form>
+  </section>
+

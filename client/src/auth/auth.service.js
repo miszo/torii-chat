@@ -39,6 +39,12 @@ class AuthService {
     return this.authToken;
   }
 
+  logout() {
+    this.authToken = null;
+    localStorage.clear();
+    this.$state.go('login');
+  }
+
 
 }
 
