@@ -4,7 +4,7 @@ class RegisterCtrl {
     this.userData = {};
   }
 
-  register() {
+  register() { //TODO: Walidacja z angularowego formularza
     if ( !this.userData.username ||
          !this.userData.email ||
          !this.userData.firstName ||

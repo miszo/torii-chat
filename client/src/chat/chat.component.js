@@ -4,9 +4,10 @@ const socketHost = process.env.IO_HOST || 'http://localhost:4000';
 const socket = io(socketHost);
 
 class ChatCtrl {
-  constructor(chatService, userService) {
+  constructor($timeout, chatService, userService) {
     this.chatService = chatService;
     this.userService = userService;
+    this.timeout = $timeout;
 
     this.username = null;
     this.message = null;
@@ -18,8 +19,7 @@ class ChatCtrl {
       .then(user => this.username = user.username);
 
     socket.on('groupChatMsg', data => {
-      this.messageList.push(data);
-      return this.messageList;
+     this.timeout(() => this.messageList = [...this.messageList, data], 0);
     });
   }
 
